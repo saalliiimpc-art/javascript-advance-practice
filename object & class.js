@@ -96,3 +96,49 @@
 // // Q3:-
 // let arr=[1,2,3,4,5]
 // console.log(arr instanceof Array);
+//----------------------------------------
+// //------Garbage collection:-
+// let student={
+//     name:"shiza",
+//     age:90
+// }
+// let gb=student;
+// student=null;
+// console.log(student);
+// console.log(gb.name);
+//----------------------------
+// //------Shadowing:-
+// let name="salim"
+// {
+//     let name="samir";
+//     console.log(name);
+// }
+// console.log(name);
+//-----------------
+// Illegal Shadowing:-
+
+
+
+//--------------------------------
+// // Allocation → Usage →  Deallocation
+// let person = {
+//     name: "Salim"
+// }; // Allocation
+// console.log(person.name); // Usage
+// person = null; // Removes this reference
+
+//-----------------------
+// Memoization
+
+function mq(){
+    let ans={};
+    return function(n){
+        if (n in ans){
+            return ans[n];
+        }
+        console.log("calculating.....");
+        let result=n*n;
+        ans[n]=result;
+        return result
+    }
+}    

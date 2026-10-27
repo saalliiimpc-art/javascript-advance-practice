@@ -23,5 +23,6 @@
  .then((data)=>{
     p.textContent=data.name;
  })
-
-
+ .catch((error)=>{
+   p.textContent=error;
+ })

@@ -206,3 +206,110 @@
 // .then((result)=>{
 //     console.log(result)
 // });
+// //-------------------------------------
+// function step1(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("step one  completed")
+//             resolve()
+//         },2000) 
+//     })
+// }
+// function step2(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("step two  completed")
+//             resolve()
+//         },2000)
+//     })
+// }
+// function step3(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("step three completed")
+//             resolve()
+//         },2000)
+//     })
+// }
+// // callbackhell:-
+// s1(()=>{
+//     s2(()=>{
+//         s3(()=>{
+//             s4(()=>{
+//                 console.log("all work done");
+                
+//             })
+//         })
+//     })
+// })
+// //-promise:-
+// step1()
+// .then(()=>step2())
+// .then(()=>step3())
+// .then(()=>{
+//     console.log("all are done");
+// })
+// .catch(()=>{
+//     console.log("there is a error")
+// })
+// // async:-
+// async function runSteps() { 
+//     await step1();
+//     await step2();
+//     await step3();
+//     console.log("All steps completed");
+// }
+// runSteps()
+// //- truy:-
+// async function runsteps(){
+//     try{
+//         await step1()
+//         await step2()
+//         await step3()
+//         console.log("all promises sucsess");
+        
+//     }
+//     catch{
+//         console.log("promisse have error");
+//     }
+                                                                                                                                                                                                            
+// }
+// runsteps()
+
+// -----------Q:-
+// //----------------------------------------------
+// function example(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("task completed")
+//             reject()
+//         },3000)
+//     })
+// }
+// // // -promise:-
+// // example()
+// // .then((result)=>{
+// //     console.log("pormise resolved")
+// // })
+// // .catch(()=>{
+// //     console.log("promise failed")
+// // })
+
+// // //-async
+// // async function saa(){
+// //     await example();
+// //     console.log("promise resloved");    
+// // }
+// // saa()
+
+// // async try cacth:-
+// async function saa(){
+//     try{
+//         await example()
+//         console.log("promise sucsessfull");
+//     }
+//     catch(error){
+//         console.log("promise unsuccsessfull");
+//     }
+// }
+// saa()
